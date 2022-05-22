@@ -10,16 +10,15 @@ function MapPage() {
   const [markersList, setMarkersList] = useState({});
 
   useEffect(() => {
-    function getMarkers() {
+    function getMarkersList() {
       const markersRef = ref(database, 'markers/');
       onValue(markersRef, (snapshot) => {
         const data = snapshot.val();
         setMarkersList(data);
-        console.log(data);
       })
     }
 
-    getMarkers();
+    getMarkersList();
   }, [])
 
   return (
