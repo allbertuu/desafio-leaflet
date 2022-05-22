@@ -1,4 +1,4 @@
-![GitHub repo size](https://img.shields.io/github/repo-size/allbertuu/sneakers?style=for-the-badge)
+<!-- ![GitHub repo size](https://img.shields.io/github/repo-size/allbertuu/sneakers?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/allbertuu/sneakers?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/allbertuu/sneakers?style=for-the-badge)
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/allbertuu/sneakers?style=for-the-badge)
@@ -103,3 +103,4 @@ Thank to [SatellaSoft](https://www.youtube.com/watch?v=NXdjf6GJSKo&ab_channel=Sa
 
 
 [Back to the 🔝](#e-commerce-product-page-solution-)
+ -->
