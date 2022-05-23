@@ -33,19 +33,22 @@ function Form() {
     setLocalData({ ...localData, [e.target.name]: e.target.value });
   }
 
-  async function handleSubmit(e: FormEvent) {
+  function handleSubmit(e: FormEvent) {
     e.preventDefault();
 
-    async function addLocalData() {
+    async function addLocalDataToDatabase() {
       await set(ref(database, `markers/${localData.name}`), localData)
         .then(() => {
           setAddSuccessful(true);
           resetInputs();
         })
-        .catch(() => setAddIsCancelled(true));
+        .catch(() => {
+          setAddIsCancelled(true);
+          resetInputs();
+        });
     }
 
-    addLocalData();
+    addLocalDataToDatabase();
   }
 
   return (
