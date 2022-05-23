@@ -60,13 +60,5 @@
     "map"
   ],
   "author": "Alberto Vinícius Albuquerque dos Santos",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/allbertuu/desafio-leaflet.git"
-  },
-  "bugs": {
-    "url": "https://github.com/allbertuu/desafio-leaflet/issues"
-  },
-  "homepage": "https://github.com/allbertuu/desafio-leaflet#readme"
+  "license": "ISC"
 }
