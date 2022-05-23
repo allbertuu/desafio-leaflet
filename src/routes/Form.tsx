@@ -89,12 +89,13 @@ function Form() {
                       Latitude
                     </label>
                     <input
-                      type="text"
+                      type="number"
                       name="latitude"
                       id="latitude"
                       onChange={e => handleInputOnChange(e)}
                       className="mt-1 focus:ring-slate-500 focus:border-slate-500 block w-full shadow-sm border-gray-300 rounded-md"
                       required
+                      pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any"
                     />
                   </div>
                   <div className="col-span-6">
@@ -102,12 +103,13 @@ function Form() {
                       Longitude
                     </label>
                     <input
-                      type="text"
+                      type="number"
                       name="longitude"
                       id="longitude"
                       onChange={e => handleInputOnChange(e)}
                       className=" mt-1 focus:ring-slate-500 focus:border-slate-500 block w-full shadow-sm border-gray-300 rounded-md"
                       required
+                      pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any"
                     />
                   </div>
 
