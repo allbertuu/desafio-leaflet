@@ -59,7 +59,7 @@ function Form() {
 
       <LocationMarkerIcon className="text-white h-16 mb-4" />
 
-      <h1 className="text-3xl uppercase text-center">Bem-vindo!</h1>
+      <h1 className="text-3xl uppercase text-center font-bold">Bem-vindo!</h1>
 
       <h3 className="text-xl text-center mt-4">Cadastre um local</h3>
       <div className="my-5 mx-10">
