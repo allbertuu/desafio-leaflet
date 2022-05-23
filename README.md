@@ -11,27 +11,28 @@ Esse é um desafio proposto por uma empresa para uma vaga de estágio de desenvo
 ## Tabela de conteúdos
 
 - [Visão geral](#visão-geral)
-  - [O desafio](#O-desafio-⚡)
+  - [O desafio](#o-desafio-)
   - [Screenshot](#screenshot-)
-- [Meu Processo](#Meu-Processo)
-  - [Feito com](#Feito-com-⚙)
-  - [Continued development](#continued-development-)
-  - [Useful resources](#useful-resources-)
-- [Author](#author-%EF%B8%8F)
-- [Acknowledgments](#acknowledgments-)
+- [Meu Processo](#meu-processo)
+  - [Feito com](#feito-com-)
+  - [Desenvolvimento contínuo](#desenvolvimento-contínuo-)
+  - [Recursos úteis](#recursos-úteis-)
+- [Autor](#autor-%EF%B8%8F)
+- [Agradecimentos](#agradecimentos-)
 
 ## Visão geral
 
 ### O desafio ⚡
 
-> Texto transcrito da própria página do desafio
+> Texto transcrito da própria página do desafio  
+
 Para o back-end você pode utilizar a tecnologia de sua preferência, será necessário 2 RESTs:
-1 - Um REST para cadastrar uma localidade contendo (nome, latitude e longitude);
-2 - Um REST que lista todas as localidades cadastradas;
+1. Um REST para cadastrar uma localidade contendo (nome, latitude e longitude);
+2. Um REST que lista todas as localidades cadastradas;
 
 Para o front-end você poderá fazer um site com html e javascript padrão, ou poderá utilizar Angular ou React. Para os mapas você precisa utilizar a biblioteca Leaflet, o site deverá conter 2 páginas:
-1 - Uma página onde você terá 1 formulário para cadastrar uma localidade.
-2 - Uma página com um mapa que listará e mostrará as localidades no mapa com um marker.
+1. Uma página onde você terá 1 formulário para cadastrar uma localidade.
+2. Uma página com um mapa que listará e mostrará as localidades no mapa com um marker.
 
 ### Screenshot 📷
 
@@ -70,4 +71,4 @@ Para o front-end você poderá fazer um site com html e javascript padrão, ou p
 Agradeço ao canal gringo [franchyze923](https://www.youtube.com/watch?v=62Y8SFi2wBk&ab_channel=franchyze923) no YouTube. A explicação dele sobre como utilizar melhor o Leaflet com o React foi excelente e caiu em boa hora para mim. [Link do vídeo](https://www.youtube.com/watch?v=62Y8SFi2wBk&ab_channel=franchyze923).
 
 
-[Voltar para o 🔝](#Sistema-de-cadastro-de-localidades-🗺)
+[Voltar para o 🔝](#sistema-de-cadastro-de-localidades-)
