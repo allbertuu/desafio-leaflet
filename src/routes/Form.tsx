@@ -1,5 +1,4 @@
-import { database } from "../services/firebase";
-import { ref, set } from "firebase/database";
+import { addLocalDataToDatabase } from "../services/firebase";
 
 import { ChangeEvent, FormEvent, useState } from "react";
 import { Link } from "react-router-dom";
@@ -10,7 +9,7 @@ import { LocationMarkerIcon } from '@heroicons/react/solid';
 import SuccessModal from '../components/SuccessModal';
 import ErrorModal from "../components/ErrorModal";
 
-interface LocalData {
+type LocalData = {
   name: string,
   latitude: number,
   longitude: number
@@ -36,19 +35,15 @@ function Form() {
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
 
-    async function addLocalDataToDatabase() {
-      await set(ref(database, `markers/${localData.name}`), localData)
-        .then(() => {
-          setAddSuccessful(true);
-          resetInputs();
-        })
-        .catch(() => {
-          setAddIsCancelled(true);
-          resetInputs();
-        });
-    }
-
-    addLocalDataToDatabase();
+    addLocalDataToDatabase(localData)
+      .then(() => {
+        setAddSuccessful(true);
+        resetInputs();
+      })
+      .catch(() => {
+        setAddIsCancelled(true);
+        resetInputs();
+      });
   }
 
   return (
@@ -98,7 +93,7 @@ function Form() {
                       onChange={e => handleInputOnChange(e)}
                       className="mt-1 focus:ring-slate-500 focus:border-slate-500 block w-full shadow-sm border-gray-300 rounded-md"
                       required
-                      pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any"
+                      pattern="[0-9]+([,\.][0-9]+)?" step="any"
                     />
                   </div>
                   <div className="col-span-6">
@@ -112,7 +107,7 @@ function Form() {
                       onChange={e => handleInputOnChange(e)}
                       className=" mt-1 focus:ring-slate-500 focus:border-slate-500 block w-full shadow-sm border-gray-300 rounded-md"
                       required
-                      pattern="[0-9]+([,\.][0-9]+)?" min="0" step="any"
+                      pattern="[0-9]+([,\.][0-9]+)?" step="any"
                     />
                   </div>
 

@@ -1,5 +1,5 @@
-import {initializeApp} from 'firebase/app';
-import { getDatabase } from 'firebase/database';
+import { initializeApp } from 'firebase/app';
+import { getDatabase, ref, set, push } from 'firebase/database';
 
 
 const firebaseConfig = {
@@ -12,8 +12,18 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_APP_ID
 };
 
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 
-const database = getDatabase(app);
+export const database = getDatabase(app);
 
-export { app, database }
+type LocalData = {
+  name: string,
+  latitude: number,
+  longitude: number
+}
+
+export async function addLocalDataToDatabase(localData: LocalData) {
+  const markersListRef = ref(database, 'markers');
+  const newMarkerRef = push(markersListRef);
+  return await set(newMarkerRef, localData);
+}
