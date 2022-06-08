@@ -7,14 +7,14 @@ import { useEffect, useState } from "react";
 
 function MapPage() {
 
-  const [markersList, setMarkersList] = useState({});
+  const [markerList, setMarkerList] = useState({});
 
   useEffect(() => {
     function getMarkerList() {
       const markerListRef = ref(database, 'markers/');
       onValue(markerListRef, async (snapshot) => {
         const data = await snapshot.val();
-        setMarkersList(data);
+        setMarkerList(data);
       })
     }
 
@@ -29,12 +29,12 @@ function MapPage() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {Object.keys(markersList).map((localObj, index) => (
+        {Object.keys(markerList).map((marker, index) => (
           // @ts-ignore 
-          <Marker position={[markersList[localObj]['latitude'], markersList[localObj]['longitude']]} key={index}>
+          <Marker position={[markerList[marker]['latitude'], markerList[marker]['longitude']]} key={index}>
             <Popup>
               {// @ts-ignore 
-              markersList[localObj]['name']}
+              markerList[marker]['name']}
             </Popup>
           </Marker>
         ))}
